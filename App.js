@@ -1,31 +1,22 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import Expo from 'expo';
-import { Root, Container, Header, Content, Button, Text, View, Toast } from 'native-base';
+import { Root } from 'native-base';
+import { AppLoading } from 'expo';
+import { createDrawerNavigator } from 'react-navigation';
+import { Icon } from 'native-base';
 
-const styles = StyleSheet.create({
-  header: {
-    alignItems: 'center',
-    justifyContent: 'center',
+import Hello from './Hello';
+import Page from './Page';
+
+const AppNavigator = createDrawerNavigator({
+  Hello: {
+    screen: Hello,
+    navigationOptions: { drawerLabel: 'Hello', drawerIcon: () => <Icon name="home" /> },
   },
-  headerText: {
-    color: 'white',
-  },
-  contentContainer: {
-    flex: 1,
-    padding: 32, // must be number
-    alignItems: 'center', // must be container style
-    justifyContent: 'center', // must be container style
-    backgroundColor: '#fff',
+  Page: {
+    screen: Page,
+    navigationOptions: { drawerLabel: 'Page', drawerIcon: () => <Icon name="person" /> },
   },
 });
-
-function handleClick() {
-  Toast.show({
-    text: 'clicked!',
-    buttonText: 'ok',
-  });
-}
 
 export default class App extends React.Component {
   constructor() {
@@ -46,22 +37,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (!this.state.isReady) return <Expo.AppLoading />;
+    if (!this.state.isReady) return <AppLoading />;
 
     return (
       <Root>
-        <Container>
-          <Header style={styles.header}>
-            <Text style={styles.headerText}>Header</Text>
-          </Header>
-          <Content contentContainerStyle={styles.contentContainer}>
-            <View>
-              <Button onPress={() => handleClick()}>
-                <Text>Hello!!</Text>
-              </Button>
-            </View>
-          </Content>
-        </Container>
+        <AppNavigator />
       </Root>
     );
   }
