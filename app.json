@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "testproj",
+    "name": "test-drawer",
     "description": "This project is really great.",
-    "slug": "testproj",
+    "slug": "test-drawer",
     "privacy": "public",
     "sdkVersion": "30.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

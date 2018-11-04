@@ -6,7 +6,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "storybook": "storybook start",
+    "prestorybook": "rnstl"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": "./src/client/native",
+      "pattern": "**/*.stories.js"
+    }
   },
   "dependencies": {
     "expo": "^30.0.1",
@@ -15,5 +23,16 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-navigation": "^2.18.2",
     "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.2",
+    "@storybook/addon-links": "^4.0.2",
+    "@storybook/addons": "^4.0.2",
+    "@storybook/react-native": "^4.0.2",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "prop-types": "^15.6.2",
+    "react-dom": "16.3.1",
+    "react-native-storybook-loader": "^1.8.0"
   }
 }
