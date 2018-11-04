@@ -7,6 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
+    "lint": "eslint --fix --ext .jsx,.js ./src/client/native",
+    "prettier": "prettier --config .prettierrc -l --write \"./src/client/**/*.js*\"",
     "storybook": "storybook start",
     "prestorybook": "rnstl"
   },
@@ -19,6 +21,7 @@
   "dependencies": {
     "expo": "^30.0.1",
     "native-base": "^2.8.1",
+    "prop-types": "^15.6.2",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-navigation": "^2.18.2",
@@ -30,8 +33,16 @@
     "@storybook/addons": "^4.0.2",
     "@storybook/react-native": "^4.0.2",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-runtime": "^6.26.0",
-    "prop-types": "^15.6.2",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3",
     "react-dom": "16.3.1",
     "react-native-storybook-loader": "^1.8.0"
   }

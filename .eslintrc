@@ -1,0 +1,37 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "plugins": ["import", "prettier"],
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": 1,
+    "no-plusplus": 0,
+    "no-underscore-dangle": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/__stories__/**", "**/__tests__/**", "**/__mocks__/**"]
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": 0,
+
+    "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+
+    "react/destructuring-assignment": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": 0,
+    "react/require-default-props": 0
+  },
+  "globals": {},
+  "settings": {
+    "import/ignore": ["node_modules", "\\.json$"],
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "extensions": [".js", ".jsx", ".json"]
+    }
+  }
+}
