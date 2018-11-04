@@ -1,24 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-import UI from './storybook';
-export default UI;
+/* App */
+import App from './src/client/native/components/pages/App';
+export default App;
 
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>Open up App.js to start working on your app!</Text>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+/* storybook */
+// import UI from './storybook';
+// export default UI;
