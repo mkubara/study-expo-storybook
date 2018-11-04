@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Page({ navigation }) {
+export default function Another({ navigation }) {
   return (
     <Container>
       <Header>

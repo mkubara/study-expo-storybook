@@ -1,22 +1,8 @@
 import React from 'react';
 import { Root } from 'native-base';
 import { AppLoading } from 'expo';
-import { createDrawerNavigator } from 'react-navigation';
-import { Icon } from 'native-base';
 
-import Hello from './Hello';
-import Page from './Page';
-
-const AppNavigator = createDrawerNavigator({
-  Hello: {
-    screen: Hello,
-    navigationOptions: { drawerLabel: 'Hello', drawerIcon: () => <Icon name="home" /> },
-  },
-  Page: {
-    screen: Page,
-    navigationOptions: { drawerLabel: 'Page', drawerIcon: () => <Icon name="person" /> },
-  },
-});
+import AppNavigator from './navigator';
 
 export default class App extends React.Component {
   constructor() {
