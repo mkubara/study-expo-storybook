@@ -1,6 +1,6 @@
 import React from 'react';
 import { Root } from 'native-base';
-import { AppLoading } from 'expo';
+import Expo, { AppLoading } from 'expo';
 
 import AppNavigator from './navigator';
 
@@ -16,8 +16,8 @@ export default class App extends React.Component {
 
   async loadFonts() {
     await Expo.Font.loadAsync({
-      Roboto: require('../../../../../../node_modules/native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('../../../../../../node_modules/native-base/Fonts/Roboto_medium.ttf'),
+      Roboto: require('../../../../../../node_modules/native-base/Fonts/Roboto.ttf'), // eslint-disable-line global-require
+      Roboto_medium: require('../../../../../../node_modules/native-base/Fonts/Roboto_medium.ttf'), // eslint-disable-line global-require
     });
     this.setState({ isReady: true });
   }

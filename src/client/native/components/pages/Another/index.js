@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-native';
 import {
   Container,
@@ -9,10 +10,8 @@ import {
   Right,
   Icon,
   Content,
-  Button,
   Text,
   View,
-  Toast,
 } from 'native-base';
 
 const styles = StyleSheet.create({
@@ -45,3 +44,7 @@ export default function Another({ navigation }) {
     </Container>
   );
 }
+
+Another.propTypes = {
+  navigation: PropTypes.object,
+};

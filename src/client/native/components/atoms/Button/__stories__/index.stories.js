@@ -3,7 +3,7 @@ import { Text } from 'native-base';
 import { storiesOf } from '@storybook/react-native';
 
 import Button from '..';
-import CenterView from '../../CenterView'
+import CenterView from '../../CenterView';
 
 storiesOf('atoms/Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)

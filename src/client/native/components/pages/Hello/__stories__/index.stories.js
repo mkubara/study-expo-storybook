@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'native-base';
 import { storiesOf } from '@storybook/react-native';
 
 import Hello from '..';

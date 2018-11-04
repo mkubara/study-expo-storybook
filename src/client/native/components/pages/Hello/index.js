@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-native';
 import {
   Container,
@@ -60,3 +61,7 @@ export default function Hello({ navigation }) {
     </Container>
   );
 }
+
+Hello.propTypes = {
+  navigation: PropTypes.object,
+};
